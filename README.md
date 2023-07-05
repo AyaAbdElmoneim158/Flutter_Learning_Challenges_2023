@@ -1,3 +1,6 @@
-# 🍭 Learn with Omar Ahmed 
+# 🍭 Learn with Omar Ahmed
 
-    -  Bloc
+    -  Bloc....
+        🔹 Add structure, Add routing, Add packages
+        🔹 Add constants (color + String)
+        🔹 Add character model
