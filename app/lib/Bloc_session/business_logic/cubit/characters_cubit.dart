@@ -16,11 +16,15 @@ class CharactersCubit extends Cubit<CharactersState> {
   List<CharacterModel> charachters = [];
   List<CharacterModel> getAllCharacters() {
     charachterRepository.getAllCharacters().then((value) {
-      charachters = value;
       emit(CharactersLoaded(charchters: value));
+      charachters = value;
+      debugPrint(
+          "Value : to GetAllCharacters ${charachters.length} .... ${charachters.map((e) => e.id)}");
+      // return value;
     }).catchError((err) {
       debugPrint("Err : to GetAllCharacters .... $err");
     });
+    // return [];
     return charachters;
   }
 }
