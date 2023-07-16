@@ -1,7 +1,7 @@
 import 'package:app/Bloc_session/business_logic/cubit/characters_cubit.dart';
 import 'package:app/Bloc_session/constants/string.dart';
-import 'package:app/Bloc_session/data/repository/charachter_repository.dart';
-import 'package:app/Bloc_session/data/services/charachter_services.dart';
+import 'package:app/Bloc_session/data/repository/character_repository.dart';
+import 'package:app/Bloc_session/data/services/character_services.dart';
 import 'package:app/Bloc_session/presentation/screens/details_screen.dart';
 import 'package:app/Bloc_session/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +14,9 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => CharactersCubit(
-              charachterRepository: CharachterRepository(
-                charachterServices: CharachterServices(),
-              ),//! Add to constructor...................
+              characterRepository: CharacterRepository(
+                characterServices: CharacterServices(),
+              ), //! Add to constructor...................
             ),
             child: const HomeScreen(),
           ),

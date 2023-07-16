@@ -2,15 +2,15 @@ import 'package:app/Bloc_session/constants/color.dart';
 import 'package:app/Bloc_session/data/model/character_model.dart';
 import 'package:flutter/material.dart';
 
-class CustomeCharachterList extends StatelessWidget {
-  const CustomeCharachterList({super.key, required this.charchters});
-  final List<CharacterModel> charchters;
+class CustomCharacterList extends StatelessWidget {
+  const CustomCharacterList({super.key, required this.characters});
+  final List<CharacterModel> characters;
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
         physics: const ClampingScrollPhysics(),
         shrinkWrap: true,
-        itemCount: charchters.length,
+        itemCount: characters.length,
         padding: EdgeInsets.zero,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -18,18 +18,17 @@ class CustomeCharachterList extends StatelessWidget {
             // mainAxisSpacing: 16,
             childAspectRatio: 2 / 3),
         itemBuilder: (context, index) =>
-            CharacterWidget(charchter: charchters[index]));
-    //  CharacterWidget(charchters: charchters);
+            CharacterWidget(character: characters[index]));
   }
 }
 
 class CharacterWidget extends StatelessWidget {
   const CharacterWidget({
     super.key,
-    required this.charchter,
+    required this.character,
   });
 
-  final CharacterModel charchter;
+  final CharacterModel character;
 
   @override
   Widget build(BuildContext context) {
@@ -44,17 +43,17 @@ class CharacterWidget extends StatelessWidget {
             padding: const EdgeInsetsDirectional.all(8),
             color: Colors.black38,
             alignment: Alignment.center,
-            child: Text(charchter.name)),
+            child: Text(character.name)),
         child: Container(
           decoration: const BoxDecoration(color: AppColor.kGray),
-          child: charchter.image.isNotEmpty
+          child: character.image.isNotEmpty
               ? FadeInImage(
                   width: double.infinity,
                   height: double.infinity,
                   fit: BoxFit.cover,
                   placeholder: const NetworkImage(
                       "https://media2.giphy.com/media/xTkcEQACH24SMPxIQg/200w.webp?cid=ecf05e47gp5m9kp4rmrj8uc7hdqkyrnukxzy9q9mweh370wn&ep=v1_gifs_search&rid=200w.webp&ct=g"),
-                  image: NetworkImage(charchter.image),
+                  image: NetworkImage(character.image),
                 )
               : Image.network(
                   width: double.infinity,

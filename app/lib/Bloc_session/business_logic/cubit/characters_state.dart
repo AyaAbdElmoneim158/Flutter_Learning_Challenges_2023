@@ -7,9 +7,8 @@ abstract class CharactersState {}
 class CharactersInitial extends CharactersState {}
 
 class CharactersLoaded extends CharactersState {
-  final List<CharacterModel> charchters;
+  final List<CharacterModel> characters;
   CharactersLoaded({
-    required this.charchters,
+    required this.characters,
   });
-  
 }

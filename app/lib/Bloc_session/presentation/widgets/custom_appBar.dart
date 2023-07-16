@@ -1,10 +1,8 @@
-import 'package:app/Bloc_session/business_logic/cubit/characters_cubit.dart';
 import 'package:app/Bloc_session/constants/color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
-  const CustomAppbar({
+class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+  const CustomAppBar({
     super.key,
   });
 
@@ -13,7 +11,7 @@ class CustomAppbar extends StatelessWidget with PreferredSizeWidget {
     return AppBar(
       backgroundColor: AppColor.kYellow,
       title: const Text(
-        "Charachters",
+        "Characters",
         style: TextStyle(color: AppColor.kGray),
       ),
       actions: [

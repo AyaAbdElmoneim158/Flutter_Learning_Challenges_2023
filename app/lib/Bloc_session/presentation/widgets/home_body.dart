@@ -1,6 +1,6 @@
 import 'package:app/Bloc_session/business_logic/cubit/characters_cubit.dart';
 import 'package:app/Bloc_session/constants/color.dart';
-import 'package:app/Bloc_session/presentation/widgets/custome_charachter_list.dart';
+import 'package:app/Bloc_session/presentation/widgets/custom_character_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,7 +14,7 @@ class HomeBody extends StatelessWidget {
     return BlocBuilder<CharactersCubit, CharactersState>(
       builder: (context, state) {
         if (state is CharactersLoaded) {
-          return CustomeCharachterList(charchters: state.charchters);
+          return CustomCharacterList(characters: state.characters);
         } else {
           return const Center(
               child: CircularProgressIndicator(color: AppColor.kYellow));
