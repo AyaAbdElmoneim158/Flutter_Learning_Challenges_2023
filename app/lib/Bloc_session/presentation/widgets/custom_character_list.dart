@@ -13,10 +13,9 @@ class CustomCharacterList extends StatelessWidget {
         itemCount: characters.length,
         padding: EdgeInsets.zero,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            // crossAxisSpacing: 16,
-            // mainAxisSpacing: 16,
-            childAspectRatio: 2 / 3),
+          crossAxisCount: 2,
+          childAspectRatio: 2 / 3,
+        ),
         itemBuilder: (context, index) =>
             CharacterWidget(character: characters[index]));
   }

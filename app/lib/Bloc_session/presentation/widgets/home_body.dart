@@ -13,8 +13,13 @@ class HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CharactersCubit, CharactersState>(
       builder: (context, state) {
+        var cubit = BlocProvider.of<CharactersCubit>(context);
         if (state is CharactersLoaded) {
           return CustomCharacterList(characters: state.characters);
+        } else if (state is CharactersSearched) {
+          return CustomCharacterList(characters: state.characters);
+        } else if (!(cubit.isSearch)) {
+          return CustomCharacterList(characters: cubit.getAllCharacters());
         } else {
           return const Center(
               child: CircularProgressIndicator(color: AppColor.kYellow));

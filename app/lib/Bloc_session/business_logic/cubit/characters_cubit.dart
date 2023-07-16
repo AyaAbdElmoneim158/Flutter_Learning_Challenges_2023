@@ -12,7 +12,6 @@ class CharactersCubit extends Cubit<CharactersState> {
 
   CharacterRepository characterRepository;
 
-  /// GetAllCharacters ---------------------------------------------------------
   List<CharacterModel> characters = [];
   List<CharacterModel> getAllCharacters() {
     characterRepository.getAllCharacters().then((value) {
@@ -20,11 +19,22 @@ class CharactersCubit extends Cubit<CharactersState> {
       characters = value;
       debugPrint(
           "Value : to GetAllCharacters ${characters.length} .... ${characters.map((e) => e.id)}");
-      // return value;
     }).catchError((err) {
       debugPrint("Err : to GetAllCharacters .... $err");
     });
-    // return [];
     return characters;
+  }
+
+  bool isSearch = false;
+  List<CharacterModel> searchedCharacters = [];
+  List<CharacterModel> searchCharacter(String pattern) {
+    searchedCharacters = [];
+    searchedCharacters = characters
+        .where((character) => character.name.toLowerCase().startsWith(pattern))
+        .toList();
+    emit(CharactersSearched(characters: searchedCharacters));
+    debugPrint(
+        "Search pattern: $pattern : ${characters.length}-> number ${searchedCharacters.length}");
+    return searchedCharacters.isEmpty ? characters : searchedCharacters;
   }
 }

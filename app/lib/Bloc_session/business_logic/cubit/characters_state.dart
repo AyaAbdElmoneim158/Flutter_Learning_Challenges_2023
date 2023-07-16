@@ -12,3 +12,10 @@ class CharactersLoaded extends CharactersState {
     required this.characters,
   });
 }
+
+class CharactersSearched extends CharactersState {
+  final List<CharacterModel> characters;
+  CharactersSearched({
+    required this.characters,
+  });
+}
