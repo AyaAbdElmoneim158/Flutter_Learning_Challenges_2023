@@ -22,10 +22,10 @@ class AppRoutes {
           ),
         );
 
-      case AppString.detailsRoutes:
-        return MaterialPageRoute(
-          builder: (context) => const DetailsScreen(),
-        );
+      // case AppString.detailsRoutes:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const DetailsScreen(),
+      //   );
       // default:
     }
     return null;
