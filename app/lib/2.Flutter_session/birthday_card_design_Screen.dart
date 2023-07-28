@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 class BirthdayCardDesignScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class BirthdayCardDesignScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          "BirthdayCardDesignScreen",//D2BCD5
+          "BirthdayCardDesignScreen", //D2BCD5
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),

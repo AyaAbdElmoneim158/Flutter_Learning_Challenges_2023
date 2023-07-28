@@ -1,7 +1,7 @@
 import 'package:app/Note_App/widgets/form_bottom_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class CustomBottomSheet extends StatelessWidget {
   const CustomBottomSheet({
@@ -21,8 +21,8 @@ class CustomBottomSheet extends StatelessWidget {
                 behavior: SnackBarBehavior.floating,
                 backgroundColor: Colors.transparent,
                 content: AwesomeSnackbarContent(
-                    title: "Succes",
-                    message: "Add to do Sucessfly",
+                    title: "Success",
+                    message: "Add to do Successfully",
                     contentType: ContentType.success)));
         }
       },
