@@ -15,7 +15,7 @@ class RemoteDataSource implements BaseRemoteDataSource {
     try {
       Response res = await Dio().get(
           "${AppConstants.baseUrl}/weather?q=$cityName&appid=${AppConstants.apiKey}");
-      debugPrint(res.data);
+      debugPrint(res.toString());
       return WeatherModel.fromJSON(res.data);
     } catch (e) {
       debugPrint(e.toString());

@@ -3,7 +3,7 @@ class Weather {
   final String name;
   final String main;
   final String description;
-  final String pressure;
+  final int pressure;
   Weather({
     required this.id,
     required this.name,
