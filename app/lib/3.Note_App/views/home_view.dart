@@ -1,5 +1,5 @@
-import 'package:app/Note_App/widgets/body_home_view.dart';
-import 'package:app/Note_App/widgets/custom_bottom_sheet.dart';
+import 'package:app/3.Note_App/widgets/body_home_view.dart';
+import 'package:app/3.Note_App/widgets/custom_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 

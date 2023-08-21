@@ -1,4 +1,4 @@
-import 'package:app/Note_App/views/note_view.dart';
+import 'package:app/3.Note_App/views/note_view.dart';
 import 'package:flutter/material.dart';
 
 class TodoItem extends StatelessWidget {

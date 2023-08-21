@@ -1,5 +1,5 @@
-import 'package:app/Note_App/widgets/custom_appbar.dart';
-import 'package:app/Note_App/widgets/custom_text_field.dart';
+import 'package:app/3.Note_App/widgets/custom_appbar.dart';
+import 'package:app/3.Note_App/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class BodyNoteView extends StatelessWidget {
