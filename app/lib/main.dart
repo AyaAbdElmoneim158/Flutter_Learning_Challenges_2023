@@ -1,4 +1,5 @@
 import 'package:app/Topics/1.localization/localization.dart';
+import 'package:app/Topics/2.Animation/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
@@ -43,6 +44,6 @@ class _MyAppState extends State<MyApp> {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: S.delegate.supportedLocales,
-        home: const LocalizationScreen());
+        home: const AnimationScreen());
   }
 }
