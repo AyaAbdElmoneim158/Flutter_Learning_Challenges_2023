@@ -1,4 +1,4 @@
-import 'package:app/4.Bookly_App/core/functions/styles.dart';
+import 'package:app/4.Bookly_App/core/util/styles.dart';
 import 'package:app/4.Bookly_App/features/search/presention/view/widgets/custom_search_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

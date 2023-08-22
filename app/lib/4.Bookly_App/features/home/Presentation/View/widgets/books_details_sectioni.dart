@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'book_rating.dart';
 import 'books_action.dart';
 import 'custom_book_item.dart';
-import '../../../../../core/functions/styles.dart';
+import '../../../../../core/util/styles.dart';
 
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key});

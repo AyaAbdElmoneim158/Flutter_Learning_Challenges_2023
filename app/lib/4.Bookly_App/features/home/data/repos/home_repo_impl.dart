@@ -4,6 +4,7 @@ import 'package:app/4.Bookly_App/core/util/api_servrice.dart';
 import 'package:app/4.Bookly_App/features/home/data/models/book_model/book_model.dart';
 import 'package:app/4.Bookly_App/features/home/data/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl extends HomeRepo {
   final ApiService apiService;
@@ -14,19 +15,39 @@ class HomeRepoImpl extends HomeRepo {
   @override
   Future<Either<Failure, List<BookModel>>> getNewestBooks() async {
     try {
-      var data = await apiService.get(endPoint: "volumes?q=computer science");
+      var data = await apiService.get(
+          endPoint:
+              "volumes?Filtering=free-ebook&Sorting=newest&q=Subject:computer science");
       List<BookModel> books = [];
       for (var element in data["Items"]) {
         books.add(BookModel.fromJson(element));
       }
       return Right(books);
     } catch (e) {
-      return left(ServerFailure());
+      if (e is DioException) {
+        return left(ServerFailure.fromDioError(e));
+      } else {
+        return left(ServerFailure(message: e.toString()));
+      }
     }
   }
 
   @override
-  Future<Either<Failure, List<BookModel>>> getFeatureBooks() {
-    throw UnimplementedError();
+  Future<Either<Failure, List<BookModel>>> getFeatureBooks() async {
+    try {
+      var data = await apiService.get(
+          endPoint: "volumes?Filtering=free-ebook&q=Subject:computer science");
+      List<BookModel> books = [];
+      for (var element in data["Items"]) {
+        books.add(BookModel.fromJson(element));
+      }
+      return Right(books);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioError(e));
+      } else {
+        return left(ServerFailure(message: e.toString()));
+      }
+    }
   }
 }
