@@ -1,6 +1,5 @@
 import 'package:app/4.Bookly_App/features/home/Presentation/View/widgets/book_details_view_body.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class BookDetailsView extends StatefulWidget {
   const BookDetailsView({super.key});

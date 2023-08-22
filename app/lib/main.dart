@@ -3,7 +3,6 @@ import 'package:app/3.Note_App/cubit/cubit_notes/notes_cubit.dart';
 import 'package:app/3.Note_App/models/note_model.dart';
 import 'package:app/4.Bookly_App/core/constants.dart';
 import 'package:app/4.Bookly_App/core/util/app_router.dart';
-import 'package:app/4.Bookly_App/features/home/Presentation/View/book_details_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';

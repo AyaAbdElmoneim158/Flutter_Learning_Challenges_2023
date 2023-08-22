@@ -2,7 +2,6 @@ import 'package:app/4.Bookly_App/core/Widgets/list_view_item.dart';
 import 'package:app/4.Bookly_App/core/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BookCard extends StatelessWidget {
   const BookCard({
