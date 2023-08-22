@@ -26,7 +26,7 @@ class FeaturedBooksListView extends StatelessWidget {
                 },
                 child: const CustomBookImage(
                   imageUrl:
-                      '', //state.books[index].volumeInfo.imageLinks?.thumbnail ??'',
+                      'assets/test_book_image_2.png', //state.books[index].volumeInfo.imageLinks?.thumbnail ??'',
                 ),
               ),
             );

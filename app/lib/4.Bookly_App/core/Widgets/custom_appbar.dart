@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -15,7 +16,9 @@ class CustomAppBar extends StatelessWidget {
         IconButton(
             padding: EdgeInsetsDirectional.zero,
             alignment: AlignmentDirectional.centerEnd,
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push('/search');
+            },
             icon: const FaIcon(
               FontAwesomeIcons.magnifyingGlass,
               size: 20,
