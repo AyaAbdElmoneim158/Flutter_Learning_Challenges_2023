@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class BodySplashView extends StatefulWidget {
   const BodySplashView({
@@ -17,7 +17,7 @@ class _BodySplashViewState extends State<BodySplashView> {
   void initState() {
     super.initState();
     Timer(const Duration(milliseconds: 2000), () {
-      // Get.to(() => const HomeView(),);
+      GoRouter.of(context).push('/home');
     });
   }
 
