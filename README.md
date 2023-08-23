@@ -6,3 +6,7 @@
         * Add Entities
         * Add Repositories
         * Add UseCases
+    _ Add Data-layer to movies-modules
+        * Add MovieModel
+        * Add dataSources
+        * Add Repositories

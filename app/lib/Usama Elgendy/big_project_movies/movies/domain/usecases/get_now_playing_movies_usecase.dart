@@ -1,10 +1,13 @@
+import 'package:app/Usama%20Elgendy/big_project_movies/core/error/failure.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/movie.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/repository/base_movie_repository.dart';
+import 'package:dartz/dartz.dart';
 
-class GetNowPlayingMovies {
+class GetNowPlayingMoviesUseCase {
   BaseMovieRepository baseMovieRepository;
-  GetNowPlayingMovies({required this.baseMovieRepository});
-  Future<List<Movie>> execute() async {
+  GetNowPlayingMoviesUseCase({required this.baseMovieRepository});
+
+  Future<Either<Failure, List<Movie>>> execute() async {
     return await baseMovieRepository.getNowPlayingMovies();
   }
 }
