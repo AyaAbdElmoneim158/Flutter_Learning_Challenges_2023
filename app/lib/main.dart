@@ -1,11 +1,23 @@
-import 'package:app/Usama%20Elgendy/frist_project_Weather/data/datasource/remote_data_source.dart';
-import 'package:app/Usama%20Elgendy/frist_project_Weather/data/repository/weather_repository.dart';
-import 'package:app/Usama%20Elgendy/frist_project_Weather/domain/entities/weather.dart';
-import 'package:app/Usama%20Elgendy/frist_project_Weather/domain/repository/base_weather_repository.dart';
-import 'package:app/Usama%20Elgendy/frist_project_Weather/domain/usecases/get_weather_by_city_name.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/persentationt/screens/movie_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() async {
+void main() {
+  runApp(const MovieApp());
+}
+
+class MovieApp extends StatelessWidget {
+  const MovieApp({super.key}); //
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Movie App",
+      home: MovieScreen(),
+    );
+  }
+}
+/*void main() async {
   RemoteDataSource remoteDataSource = RemoteDataSource();
   BaseWeatherRepository weatherRepository =
       WeatherRepository(remoteDataSource: remoteDataSource);
@@ -35,4 +47,4 @@ void main() async {
       ),
     ),
   ));
-}
+}*/
