@@ -1,7 +1,4 @@
 import 'package:app/Usama%20Elgendy/big_project_movies/core/util/enums.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/datasource/movie_remote_data_source.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/repository/movies_repository.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/repository/base_movie_repository.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_now_playing_movies_usecase.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_events.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_states.dart';
