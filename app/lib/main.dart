@@ -3,7 +3,8 @@ import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/scree
 import 'package:flutter/material.dart';
 
 void main() {
-  ServicesLocator().init;
+  WidgetsFlutterBinding.ensureInitialized;
+  ServicesLocator().init();
   runApp(const MovieApp());
 }
 
@@ -15,7 +16,7 @@ class MovieApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Movie App",
-      home: MainMoviesScreen(),
+      home: MoviesScreen(),
     );
   }
 }

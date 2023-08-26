@@ -30,8 +30,7 @@ class MovieRemoteDataSource extends BaseMovieRemoteDataSource {
   Future<List<Movie>> getPopularMovies() async {
     Response response = await Dio().get(ApiConstants.popularMoviesPath);
 
-    // ignore: unrelated_type_equality_checks
-    if (response.statusMessage == 200) {
+    if (response.statusCode == 200) {
       return List<MovieModel>.from(((response.data["results"]) as List).map(
           (e) => MovieModel.fromJson(
               e))); // :> list.form -> Creates a list containing all elements.
@@ -45,8 +44,7 @@ class MovieRemoteDataSource extends BaseMovieRemoteDataSource {
   Future<List<Movie>> getTopRateMovies() async {
     Response response = await Dio().get(ApiConstants.topRatedMoviesPath);
 
-    // ignore: unrelated_type_equality_checks
-    if (response.statusMessage == 200) {
+    if (response.statusCode == 200) {
       return List<MovieModel>.from(((response.data["results"]) as List).map(
           (e) => MovieModel.fromJson(
               e))); // :> list.form -> Creates a list containing all elements.
