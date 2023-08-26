@@ -2,8 +2,8 @@ import 'package:app/Usama%20Elgendy/big_project_movies/core/services/services_lo
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/components/now_playing_movies_component.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/components/popular_movies_component.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/components/top_rate_movies_component.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_events.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_bloc.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';

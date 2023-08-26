@@ -4,8 +4,10 @@ import 'package:app/Usama%20Elgendy/big_project_movies/core/error/failure.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/datasource/movie_remote_data_source.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/movie.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/movie_details.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/recommendation.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/repository/base_movie_repository.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_movie_details_usecase.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_similar_movie_usecase.dart';
 import 'package:dartz/dartz.dart';
 
 class MoviesRepository extends BaseMovieRepository {
@@ -58,8 +60,8 @@ class MoviesRepository extends BaseMovieRepository {
   }
 
   @override
-  Future<Either<Failure, List<Movie>>> getSimilarMovie(
-      MovieDetailsParameters parameters) async {
+  Future<Either<Failure, List<Recommendation>>> getSimilarMovie(
+      SimilarMovieParameters parameters) async {
     try {
       final res = await baseMovieRemoteDataSource.getSimilarMovie(parameters);
       return Right(res);

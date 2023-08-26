@@ -3,8 +3,11 @@ import 'package:app/Usama%20Elgendy/big_project_movies/core/network/api_constant
 import 'package:app/Usama%20Elgendy/big_project_movies/core/network/error_message_model.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/model/movie_details_model.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/model/movie_model.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/model/recommendation_model.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/movie.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/recommendation.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_movie_details_usecase.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_similar_movie_usecase.dart';
 import 'package:dio/dio.dart';
 
 abstract class BaseMovieRemoteDataSource {
@@ -12,7 +15,8 @@ abstract class BaseMovieRemoteDataSource {
   Future<List<Movie>> getPopularMovies();
   Future<List<Movie>> getTopRateMovies();
   Future<MovieDetailsModel> getMovieDetails(MovieDetailsParameters parameters);
-  Future<List<Movie>> getSimilarMovie(MovieDetailsParameters parameters);
+  Future<List<Recommendation>> getSimilarMovie(
+      SimilarMovieParameters parameters);
 }
 
 class MovieRemoteDataSource extends BaseMovieRemoteDataSource {
@@ -73,12 +77,14 @@ class MovieRemoteDataSource extends BaseMovieRemoteDataSource {
   }
 
   @override
-  Future<List<Movie>> getSimilarMovie(MovieDetailsParameters parameters) async {
+  Future<List<Recommendation>> getSimilarMovie(
+      SimilarMovieParameters parameters) async {
     Response response =
         await Dio().get(ApiConstants.recommendPath(parameters.movieId));
 
     if (response.statusCode == 200) {
-      return response.data;
+      return List<Recommendation>.from(((response.data["results"]) as List)
+          .map((e) => RecommendationModel.fromJson(e)));
     } else {
       throw ServerException(
           errorMessageModel: ErrorMessageModel.fromJson(response.data));

@@ -1,5 +1,5 @@
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_states.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_bloc.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_states.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/core/network/api_constants.dart';

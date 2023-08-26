@@ -4,7 +4,7 @@ import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/repository/
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_now_playing_movies_usecase.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_popular_movies_usecase.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_top_rate_movies_usecase..dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;

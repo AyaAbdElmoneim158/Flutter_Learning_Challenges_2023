@@ -5,8 +5,8 @@ import 'package:app/Usama%20Elgendy/big_project_movies/core/util/enums.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_now_playing_movies_usecase.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_popular_movies_usecase.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_top_rate_movies_usecase..dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_events.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_states.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_events.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
