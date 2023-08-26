@@ -16,3 +16,4 @@
         * Trigger Bloc at UI
 
     _ Add Domains-layer of details-movies
+    _ Add Data-layer of details-movies

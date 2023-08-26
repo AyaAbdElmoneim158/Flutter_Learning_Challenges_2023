@@ -1,3 +1,4 @@
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/model/genres_model.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/movie_details.dart';
 
 class MovieDetailsModel extends MovieDetails {
@@ -14,13 +15,14 @@ class MovieDetailsModel extends MovieDetails {
 
   factory MovieDetailsModel.fromJson(Map<String, dynamic> json) =>
       MovieDetailsModel(
-        id: json["id"],
-        genres: json["genres"],
-        title: json["title"],
         backdropPath: json["backdrop_path"],
+        genres: List<GenresModel>.from(
+            json["genres"].map((x) => GenresModel.fromJson(x))),
+        id: json["id"],
         overview: json["overview"],
-        voteAverage: json["vote_average"].toDouble(),
         releaseDate: json["release_date"],
         runtime: json["runtime"],
+        title: json["ti tle"],
+        voteAverage: json["vote_average"].toDouble(),
       );
 }

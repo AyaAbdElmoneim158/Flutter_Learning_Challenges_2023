@@ -9,7 +9,7 @@ class ApiConstants {
       "$baseUrl/movie/popular?api_key=$apiKey";
   static const String topRatedMoviesPath =
       "$baseUrl/movie/top_rated?api_key=$apiKey";
-  static String moviePath(int idMovie) =>
+  static String movieDetailsPath(int idMovie) =>
       "$baseUrl/movie/$idMovie?api_key=$apiKey";
   static String recommendPath(int idMovie) =>
       "$baseUrl/movie/$idMovie/similar?api_key=$apiKey";
