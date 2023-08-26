@@ -4,13 +4,12 @@ import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/mo
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/repository/base_movie_repository.dart';
 import 'package:dartz/dartz.dart';
 
-class GetNowPlayingMoviesUseCase
-    extends BaseUseCase<List<Movie>, NoParameters> {
-  BaseMovieRepository baseMovieRepository;
-  GetNowPlayingMoviesUseCase({required this.baseMovieRepository});
+class GetSimilarMovieUsecase extends BaseUseCase<List<Movie>, int> {
+  final BaseMovieRepository baseMovieRepository;
+  GetSimilarMovieUsecase({required this.baseMovieRepository});
 
   @override
-  Future<Either<Failure, List<Movie>>> call(NoParameters parameters) async {
-    return await baseMovieRepository.getNowPlayingMovies();
+  Future<Either<Failure, List<Movie>>> call(int parameters) async {
+    return await baseMovieRepository.getSimilarMovie();
   }
 }

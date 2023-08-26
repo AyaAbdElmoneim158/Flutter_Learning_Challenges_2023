@@ -13,3 +13,6 @@
     _ Add Presentation layer
         * Add Bloc
         * Add Ui
+        * Trigger Bloc at UI
+
+    _ Add Domains-layer of details-movies

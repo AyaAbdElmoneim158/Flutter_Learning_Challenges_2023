@@ -3,6 +3,7 @@ import 'package:app/Usama%20Elgendy/big_project_movies/core/error/exceptions.dar
 import 'package:app/Usama%20Elgendy/big_project_movies/core/error/failure.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/datasource/movie_remote_data_source.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/movie.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/movie_details.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/repository/base_movie_repository.dart';
 import 'package:dartz/dartz.dart';
 
@@ -41,5 +42,15 @@ class MoviesRepository extends BaseMovieRepository {
       return left(ServerFailure(
           failureMessage: failure.errorMessageModel.statusMessage));
     }
+  }
+
+  @override
+  Future<Either<Failure, MovieDetails>> getMovieDetails() {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<Either<Failure, List<Movie>>> getSimilarMovie() {
+    throw UnimplementedError();
   }
 }

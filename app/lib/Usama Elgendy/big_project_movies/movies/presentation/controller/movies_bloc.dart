@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:app/Usama%20Elgendy/big_project_movies/core/usecase/base_use_case.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/core/util/enums.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_now_playing_movies_usecase.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_popular_movies_usecase.dart';
@@ -35,7 +36,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     // GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase =
     //     GetNowPlayingMoviesUseCase(baseMovieRepository: baseMovieRepository);
 
-    final result = await getNowPlayingMoviesUseCase();
+    final result = await getNowPlayingMoviesUseCase(const NoParameters());
     // debugPrint("result: GetNowPlayingMoviesEvent  ");
     // emit(state.copyWith(nowPlayingState: RequestState.loaded));
 
@@ -58,7 +59,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     GetPopularMoviesEvent event,
     Emitter<MoviesState> emit,
   ) async {
-    final result = await getPopularMoviesUseCase.execute();
+    final result = await getPopularMoviesUseCase(const NoParameters());
     result.fold((l) {
       emit(state.copyWith(
         popularState: RequestState.error,
@@ -79,7 +80,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     GetTopRateMoviesEvent event,
     Emitter<MoviesState> emit,
   ) async {
-    final result = await getTopRateMoviesUseCase.execute();
+    final result = await getTopRateMoviesUseCase(const NoParameters());
     result.fold((l) {
       emit(state.copyWith(
         topRateState: RequestState.error,
