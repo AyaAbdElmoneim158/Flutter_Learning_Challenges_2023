@@ -8,6 +8,6 @@ class GenresModel extends Genres {
 
   factory GenresModel.fromJson(Map<String, dynamic> json) => GenresModel(
         id: json["id"],
-        name: json["name"],
+        name: json["name"] ?? "name",
       );
 }

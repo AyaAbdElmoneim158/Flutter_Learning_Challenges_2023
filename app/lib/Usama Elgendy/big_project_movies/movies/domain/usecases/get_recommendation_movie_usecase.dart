@@ -5,21 +5,21 @@ import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/repository/
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
-class GetSimilarMovieUsecase
-    extends BaseUseCase<List<Recommendation>, SimilarMovieParameters> {
+class GetRecommendationMovieUsecase
+    extends BaseUseCase<List<Recommendation>, RecommendationMovieParameters> {
   final BaseMovieRepository baseMovieRepository;
-  GetSimilarMovieUsecase({required this.baseMovieRepository});
+  GetRecommendationMovieUsecase({required this.baseMovieRepository});
 
   @override
   Future<Either<Failure, List<Recommendation>>> call(
-      SimilarMovieParameters parameters) async {
-    return await baseMovieRepository.getSimilarMovie(parameters);
+      RecommendationMovieParameters parameters) async {
+    return await baseMovieRepository.getRecommendationMovie(parameters);
   }
 }
 
-class SimilarMovieParameters extends Equatable {
+class RecommendationMovieParameters extends Equatable {
   final int movieId;
-  const SimilarMovieParameters({required this.movieId});
+  const RecommendationMovieParameters({required this.movieId});
 
   @override
   List<Object> get props => [movieId];

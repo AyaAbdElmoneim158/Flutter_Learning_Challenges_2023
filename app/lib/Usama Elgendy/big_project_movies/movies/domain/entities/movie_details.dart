@@ -8,9 +8,10 @@ class MovieDetails extends Equatable {
   final int id;
   final String overview;
   final String releaseDate;
-  final String runtime;
+  final int runtime;
   final String title;
   final double voteAverage;
+
   const MovieDetails({
     required this.backdropPath,
     required this.genres,

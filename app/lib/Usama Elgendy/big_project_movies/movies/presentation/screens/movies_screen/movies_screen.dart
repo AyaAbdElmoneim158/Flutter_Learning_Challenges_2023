@@ -120,7 +120,6 @@ class MoviesScreen extends StatelessWidget {
     );
   }
 }
-
 /*
 !....................................................
 import 'package:app/Usama%20Elgendy/big_project_movies/core/services/services_locator.dart';
@@ -142,13 +141,17 @@ class MoviesScreen extends StatelessWidget {
   }
 }
 */
+
 /*
 // !....................................................
 
+import 'package:app/Usama%20Elgendy/big_project_movies/core/usecase/base_use_case.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/datasource/movie_remote_data_source.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/data/repository/movies_repository.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/repository/base_movie_repository.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_movie_details_usecase.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_now_playing_movies_usecase.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_Recommendation_movie_usecase.dart';
 import 'package:flutter/material.dart';
 
 class MoviesScreen extends StatefulWidget {
@@ -172,22 +175,23 @@ class _MoviesScreenState extends State<MoviesScreen> {
     BaseMovieRepository baseMovieRepository =
         MoviesRepository(baseMovieRemoteDataSource: baseMovieRemoteDataSource);
 
-    GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase =
-        GetNowPlayingMoviesUseCase(baseMovieRepository: baseMovieRepository);
+    // GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase =
+    //     GetNowPlayingMoviesUseCase(baseMovieRepository: baseMovieRepository);
 
-    GetPopularMoviesUseCase getPopularMoviesUseCase =
-        GetPopularMoviesUseCase(baseMovieRepository: baseMovieRepository);
-
-    GetTopRateMoviesUseCase getTopRateUseCase =
-        GetTopRateMoviesUseCase(baseMovieRepository: baseMovieRepository);
     debugPrint("1");
-    var result = await getTopRateUseCase.execute();
+    // var result = await GetNowPlayingMoviesUseCase(baseMovieRepository: baseMovieRepository).call(const NoParameters());
+    // GetMovieDetailsUsecase
+    var result =
+        await GetRecommendationMovieUsecase(baseMovieRepository: baseMovieRepository)
+            .call(const RecommendationMovieParameters(movieId: 976573));
+    // await GetMovieDetailsUsecase(baseMovieRepository: baseMovieRepository).call(const MovieDetailsUseCase(movieId: 332150));
+
     debugPrint("2");
 
     result.fold(
       (l) => debugPrint(l.failureMessage),
       (r) {
-        debugPrint(r.length.toString());
+        debugPrint(r.length.toString()); //:> Menelik
         // for (var element in r) {
         //   debugPrint(element.title);
         // }

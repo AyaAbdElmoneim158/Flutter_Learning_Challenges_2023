@@ -1,4 +1,4 @@
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/screens/movies_screen.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/screens/movies_screen/movies_screen.dart';
 import 'package:flutter/material.dart';
 
 class TestScreen extends StatelessWidget {

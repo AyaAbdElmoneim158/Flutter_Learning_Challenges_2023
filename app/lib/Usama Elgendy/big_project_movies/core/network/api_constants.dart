@@ -12,7 +12,7 @@ class ApiConstants {
   static String movieDetailsPath(int idMovie) =>
       "$baseUrl/movie/$idMovie?api_key=$apiKey";
   static String recommendPath(int idMovie) =>
-      "$baseUrl/movie/$idMovie/similar?api_key=$apiKey";
+      "$baseUrl/movie/$idMovie/recommendations?api_key=$apiKey"; //:> 976573
 
   static String imageUrl(String backdropPath) => "$baseImageUrl$backdropPath";
 }

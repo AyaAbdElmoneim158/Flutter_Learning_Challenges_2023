@@ -18,3 +18,4 @@
     _ Add Domains-layer of details-movies
     _ Add Data-layer of details-movies
     _ Add Presentation-layer of details-movies (Bloc)
+    _ Add provide Bloc to UI

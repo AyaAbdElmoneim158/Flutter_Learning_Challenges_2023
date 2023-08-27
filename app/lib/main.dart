@@ -1,5 +1,5 @@
 import 'package:app/Usama%20Elgendy/big_project_movies/core/services/services_locator.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/screens/movies_screen.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/screens/movies_screen/movies_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,14 +13,18 @@ class MovieApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Movie App",
-      home: MoviesScreen(),
+      theme:
+          ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.grey[900]),
+      home: const MoviesScreen(),
     );
   }
 }
-/*void main() async {
+/*
+  !.............
+void main() async {
   RemoteDataSource remoteDataSource = RemoteDataSource();
   BaseWeatherRepository weatherRepository =
       WeatherRepository(remoteDataSource: remoteDataSource);

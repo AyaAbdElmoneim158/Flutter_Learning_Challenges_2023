@@ -1,6 +1,7 @@
 import 'package:app/Usama%20Elgendy/big_project_movies/core/util/enums.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_bloc.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movies_bloc/movies_states.dart';
+import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/screens/movie_details_screen/movie_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/core/network/api_constants.dart';
@@ -43,7 +44,15 @@ class NowPlayingMoviesComponent extends StatelessWidget {
                   (item) {
                     return GestureDetector(
                       key: const Key('openMovieMinimalDetail'),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                MovieDetailScreen(id: item.id),
+                          ),
+                        );
+                      },
                       child: Stack(
                         children: [
                           ShaderMask(
