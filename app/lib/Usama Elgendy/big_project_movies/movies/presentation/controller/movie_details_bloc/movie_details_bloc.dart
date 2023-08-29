@@ -68,7 +68,6 @@ import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/ge
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/usecases/get_recommendation_movie_usecase.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movie_details_bloc/movie_details_event.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/controller/movie_details_bloc/movie_details_state.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MovieDetailsBloc extends Bloc<MovieDetailsEvent, MovieDetailsState> {

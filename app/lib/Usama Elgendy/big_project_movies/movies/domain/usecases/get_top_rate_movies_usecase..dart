@@ -1,4 +1,4 @@
-// ignore: file_names
+// ignore_for_file: file_names
 import 'package:app/Usama%20Elgendy/big_project_movies/core/error/failure.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/core/usecase/base_use_case.dart';
 import 'package:app/Usama%20Elgendy/big_project_movies/movies/domain/entities/movie.dart';

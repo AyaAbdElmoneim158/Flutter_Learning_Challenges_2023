@@ -169,9 +169,9 @@ class MovieDetailContent extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 8.0),
-                          Text(
+                          const Text(
                             r'${AppString.genres}: ${_showGenres(state.movieDetail!.genres)}',
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: Colors.white70,
                               fontSize: 12.0,
                               fontWeight: FontWeight.w500,
@@ -214,6 +214,7 @@ class MovieDetailContent extends StatelessWidget {
     );
   }
 
+  // ignore: unused_element
   String _showGenres(List<Genres> genres) {
     String result = '';
     for (var genre in genres) {
