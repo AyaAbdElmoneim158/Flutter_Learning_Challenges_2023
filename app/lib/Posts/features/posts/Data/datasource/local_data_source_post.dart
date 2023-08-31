@@ -21,7 +21,7 @@ class LocalDataSourcePostImpl extends LocalDataSourcePost {
 
   @override
   Future<Unit> cachedPosts(List<PostModel> cachedPosts) {
-    // List<Model> -> List<Map<String, dynamic>> (Encode)
+    //! List<Model> -> List<Map<String, dynamic>> (Encode)
     List cachedPostsToJson = cachedPosts
         .map<Map<String, dynamic>>((postModel) => postModel.toJson())
         .toList();
@@ -31,7 +31,7 @@ class LocalDataSourcePostImpl extends LocalDataSourcePost {
 
   @override
   Future<List<PostModel>> getCachedPosts() {
-    // List<Map<String, dynamic>> -> List<Model> (decode)
+    //! List<Map<String, dynamic>> -> List<Model> (decode)
     var cachedPosts = sharedPreferences.getString(cachedPostsKey);
     if (cachedPosts != null) {
       List cachedPostsDecode = jsonDecode(cachedPosts);

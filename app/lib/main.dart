@@ -1,7 +1,49 @@
-import 'package:app/Usama%20Elgendy/big_project_movies/core/services/services_locator.dart';
-import 'package:app/Usama%20Elgendy/big_project_movies/movies/presentation/screens/movies_screen/movies_screen.dart';
 import 'package:flutter/material.dart';
 
+void main() {
+  WidgetsFlutterBinding.ensureInitialized;
+  runApp(const BooklyApp());
+}
+
+class BooklyApp extends StatelessWidget {
+  const BooklyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Bookly App",
+      // home: PostsPage(),
+    );
+  }
+}
+/*
+!................................................................
+import 'package:app/Posts/features/posts/injection_container.dart';
+import 'package:app/Posts/features/posts/presentation/screens/posts_page.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized;
+  init();
+  runApp(const PostsApp());
+}
+
+class PostsApp extends StatelessWidget {
+  const PostsApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Posts App",
+      home: PostsPage(),
+    );
+  }
+}*/
+
+/*
+!................................................................
 void main() {
   WidgetsFlutterBinding.ensureInitialized;
   ServicesLocator().init();
@@ -22,6 +64,7 @@ class MovieApp extends StatelessWidget {
     );
   }
 }
+*/
 /*
   !.............
 void main() async {
